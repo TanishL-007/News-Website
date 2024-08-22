@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Poppins + Roboto  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class = "company-logo" onclick="reload()">
+                <!-- <i class="fa-solid fa-newspaper"></i> -->
+                 <img src="./assets/logo.png" alt="Logo">
+            </a>
+
+            <div class="nav-links">
+                <ul class = "flex">
+                    <li class="nav-items hover-link" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="nav-items hover-link" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="nav-items hover-link" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" id = "news-input" class="news-input" placeholder="e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://placehold.co/400x200" alt="News Image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 id ="news-source">End Gadget 26/08/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores accusantium suscipit recusandae exercitationem laborum voluptas voluptatem optio porro quasi praesentium?</p>
+                </div>
+            </div>
+        </template>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
